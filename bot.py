@@ -18,7 +18,7 @@ if photo:
 
 # Submit button
 if st.button("Submit"):
-    if uploaded_photo is not None:
+    if uploaded_photo is not None and num is not None and l1 is not None:
         auto_thumbnail(episode_num=num, line1=l1, line2=l2)
 
         # Display the processed image
@@ -31,7 +31,6 @@ if st.button("Submit"):
             data=open("uploads/new_thumbnail.png", "rb").read(),
             mime="image/png",
             )
-
     else:
-        st.error("Please upload an image.")
+        st.error("ERROR: Please fill all required fields")
 
