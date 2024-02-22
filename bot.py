@@ -24,6 +24,14 @@ if st.button("Submit"):
         # Display the processed image
         st.subheader("New thumbnail")
         st.image("uploads/new_thumbnail.png")
+
+        # Add a download button for the image
+        download_button = st.download_button(
+            label="Download thumbnail",
+            data=open("uploads/new_thumbnail.png", "rb").read(),
+            mime="image/png",
+            )
+
     else:
         st.error("Please upload an image.")
 
