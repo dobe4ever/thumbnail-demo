@@ -2,31 +2,31 @@
 
 from PIL import Image, ImageDraw, ImageFont
 
-# def crop_edges(photo, target_width=643, target_height=722):
-#         image = Image.open(photo)
-#         width, height = image.size
+def crop_edges(photo, target_width=643, target_height=722):
+        image = Image.open(photo)
+        width, height = image.size
 
-#         # Calculate the left and top coordinates for the crop box
-#         left = (width - target_width) / 2 if width > target_width else 0
-#         top = (height - target_height) / 2 if height > target_height else 0
+        # Calculate the left and top coordinates for the crop box
+        left = (width - target_width) / 2 if width > target_width else 0
+        top = (height - target_height) / 2 if height > target_height else 0
 
-#         # Ensure the crop box is within the image bounds
-#         left = max(0, left)
-#         top = max(0, top)
-#         right = min(width, left + target_width)
-#         bottom = min(height, top + target_height)
+        # Ensure the crop box is within the image bounds
+        left = max(0, left)
+        top = max(0, top)
+        right = min(width, left + target_width)
+        bottom = min(height, top + target_height)
 
-#         # Crop the image and save it
-#         photo_cropped = image.crop((left, top, right, bottom))
+        # Crop the image and save it
+        uploaded_photo = image.crop((left, top, right, bottom))
 
-#         photo_cropped.save(f"uploads/photo.jpg")
+        uploaded_photo.save(f"uploads/photo.jpg")
 
-#         return photo_cropped
+        return uploaded_photo
 
-def upload_photo(photo):
-    uploaded_photo = Image.open(photo)
-    uploaded_photo.save(f"uploads/photo.jpg")
-    return uploaded_photo
+# def upload_photo(photo):
+#     uploaded_photo = Image.open(photo)
+#     uploaded_photo.save(f"uploads/photo.jpg")
+#     return uploaded_photo
 
 
 def title_1_line(line1):
