@@ -9,9 +9,9 @@ st.image("templates/Thumbnail-2-example.png")
 
 # Form for user input
 photo = st.file_uploader("Upload a image", type=["jpg", "jpeg", "png"])
-num = st.number_input("Episode number", min_value=0)
 l1 = st.text_input("Text line 1")
 l2 = st.text_input("Text line 2 (optional)")
+num = st.number_input("Episode number", min_value=0)
 
 if photo:
     uploaded_photo = upload_photo(photo)
