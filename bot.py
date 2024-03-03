@@ -3,7 +3,7 @@ from auto_thoombnail import upload_photo, auto_thumbnail
 
 
 # Main app layout
-st.image("uploads\new_thumbnail.png", width=300)
+st.image("uploads/new_thumbnail.png", width=300)
 # st.image("templates/logo.png", width=300)
 st.title("Auto Thumbnail")
 
