@@ -3,19 +3,19 @@ from auto_thoombnail import upload_photo, auto_thumbnail
 
 
 # Main app layout
-st.image("templates/Thumbnail-2-example.png", width=500)
+st.image("templates/Thumbnail-2-example.png")
 # st.image("templates/logo.png", width=300)
-st.title("Auto Thumbnail")
+# st.title("Auto Thumbnail")
 
 # Form for user input
-photo = st.file_uploader("Upload a photo", type=["jpg", "jpeg", "png"])
+photo = st.file_uploader("Upload a image", type=["jpg", "jpeg", "png"])
 num = st.number_input("Episode number", min_value=0)
-l1 = st.text_input("Title line 1")
-l2 = st.text_input("Title line 2 (optional)")
+l1 = st.text_input("Text line 1")
+l2 = st.text_input("Text line 2 (optional)")
 
 if photo:
     uploaded_photo = upload_photo(photo)
-    st.image(uploaded_photo)
+    # st.image(uploaded_photo)
 
 # Submit button
 if st.button("Submit"):
