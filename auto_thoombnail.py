@@ -23,6 +23,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 #         return cropped_photo
 
+
 def upload_photo(photo):
     uploaded_photo = Image.open(photo)
     uploaded_photo.save(f"uploads/photo.jpg")
